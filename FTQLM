@@ -1,0 +1,131 @@
+import base64
+import hashlib
+import os
+from pathlib import Path
+from getpass import getpass
+
+from cryptography.exceptions import InvalidTag
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+
+
+def _derive_key(secret_key: str, salt: bytes) -> bytes:
+    """Derive a 32-byte AES key from a shared secret and salt."""
+    return hashlib.pbkdf2_hmac("sha256", secret_key.encode("utf-8"), salt, 390000, dklen=32)
+
+
+def _read_multiline_text() -> str:
+    """Read multiline text until the user enters END on a new line."""
+    print("Enter text to encrypt (multiline). Type END on a new line to finish:")
+    lines = []
+    while True:
+        line = input()
+        if line == "END":
+            break
+        lines.append(line)
+    return "\n".join(lines)
+
+
+def _save_text_file(content: str, folder_name: str, file_name: str) -> Path:
+    """Save text into folder/file and return full path."""
+    folder = Path(folder_name)
+    folder.mkdir(parents=True, exist_ok=True)
+    file_path = folder / file_name
+    file_path.write_text(content, encoding="utf-8")
+    return file_path
+
+
+def encrypt_text() -> str:
+    """Prompt for plaintext and shared key, then return encrypted payload."""
+    plaintext = _read_multiline_text()
+    secret_key = getpass("Enter shared secret key: ")
+
+    salt = os.urandom(16)
+    nonce = os.urandom(12)
+    aes_key = _derive_key(secret_key, salt)
+    cipher = AESGCM(aes_key)
+
+    ciphertext = cipher.encrypt(nonce, plaintext.encode("utf-8"), None)
+    payload_bytes = salt + nonce + ciphertext
+    payload = base64.urlsafe_b64encode(payload_bytes).decode("utf-8")
+
+    print("Encrypted text:")
+    print(payload)
+
+    saved_path = _save_text_file(payload, "output", "test44.text")
+    print(f"Saved to file: {saved_path}")
+    return payload
+
+
+def decrypt_text() -> str | None:
+    """Prompt for encrypted payload and shared key, then decrypt."""
+    source = input("Type P to paste encrypted text or F to read from file: ").strip().lower()
+    if source == "f":
+        path_input = input("Enter file path (or press Enter for output/test44.text): ").strip()
+        path = Path(path_input) if path_input else Path("output") / "test44.text"
+        try:
+            payload = path.read_text(encoding="utf-8").strip()
+        except OSError:
+            print("Could not read encrypted file.")
+            return None
+    else:
+        payload = input("Enter encrypted text: ").strip()
+    secret_key = getpass("Enter shared secret key: ")
+
+    try:
+        payload_bytes = base64.urlsafe_b64decode(payload.encode("utf-8"))
+        if len(payload_bytes) < 29:
+            raise ValueError
+
+        salt = payload_bytes[:16]
+        nonce = payload_bytes[16:28]
+        ciphertext = payload_bytes[28:]
+
+        aes_key = _derive_key(secret_key, salt)
+        cipher = AESGCM(aes_key)
+        plaintext = cipher.decrypt(nonce, ciphertext, None).decode("utf-8")
+
+        print("Decrypted text:")
+        print(plaintext)
+        saved_path = _save_text_file(plaintext, "output", "text55.txt")
+        print(f"Saved decrypted text to file: {saved_path}")
+        return plaintext
+    except (ValueError, InvalidTag):
+        print("Decryption failed: wrong key or invalid encrypted text format.")
+        return None
+
+
+def main() -> None:
+    choice = input("Type E to encrypt or D to decrypt: ").strip().lower()
+
+    if choice == "e":
+        encrypt_text()
+    elif choice == "d":
+        decrypt_text()
+    else:
+        print("Invalid choice. Use E or D.")
+
+
+if __name__ == "__main__":
+    main()
+
+# README (commented)
+# 1) Install dependency (once):
+#    pip install cryptography
+#
+# 2) Run the script:
+#    python FTQLM
+#
+# 3) Choose mode:
+#    - Type E to encrypt text
+#    - Type D to decrypt text
+#
+# 4) For decrypt:
+#    - Paste the full encrypted payload printed during encryption
+#    - Enter the same shared secret key used to encrypt
+#
+# Notes:
+# - Encryption supports multiline input now.
+# - Finish text entry by typing END on its own line.
+# - Encrypted output is compact, but secure encryption always adds some extra length.
+# - Encrypted text is automatically saved to output/test44.text
+# - Decrypted text is automatically saved to output/text55.txt
