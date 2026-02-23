@@ -114,6 +114,7 @@ if __name__ == "__main__":
 #
 # 2) Run the script:
 #    python FTQLM
+ & C:/Users/sajan.samuel/AppData/Local/Programs/Python/Python313/python.exe c:/Users/sajan.samuel/Downloads/TEMP/FTQLM.py
 #
 # 3) Choose mode:
 #    - Type E to encrypt text
