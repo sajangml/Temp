@@ -1,117 +1,131 @@
---- Service Validation Report: VRF vblock_vrf ---
-Scope: All Switches (Spines excluded)
-Date: 2026-07-28 02:45:15
+Loaded hardcoded credentials from creds.yaml
 
-===========================================================================================================================================================
-Table 1: Active Switches (>0 Endpoints)
-===========================================================================================================================================================
-Switch                         | vPC Domain | Local Ports                    | Endpoint Count  | Remote Routes | Classification            | Health    
------------------------------------------------------------------------------------------------------------------------------------------------------------
-DCN-DHL-CC254-LEAF-93240-01    | 1          | Vlan52, Vlan54, Vlan58, Vlan2192 | 2 Endpoints     | 487           | ACTIVE - LOCALLY ATTACHED | HEALTHY   
-DCN-DHL-CC255-LEAF-93240-01    | 1          | Vlan52, Vlan54, Vlan58, Vlan2192 | 2 Endpoints     | 487           | ACTIVE - LOCALLY ATTACHED | HEALTHY   
-DCS-DHL-CC336-LEAF-93240-01    | 1          | Vlan52, Vlan54, Vlan58, Vlan2191 | 3 Endpoints     | 486           | ACTIVE - LOCALLY ATTACHED | HEALTHY   
-DCS-DHL-CC337-LEAF-93240-01    | 1          | Vlan52, Vlan54, Vlan58, Vlan2191 | 3 Endpoints     | 486           | ACTIVE - LOCALLY ATTACHED | HEALTHY   
-DCN-DHL-CC239-BGW-93240-01     | 2          | Vlan2192, Standalone Po501, Standalone Ethernet1/51.62, Standalone Ethernet1/54.62, Standalone Ethernet1/7.3278 | 4 Endpoints     | 253           | ACTIVE - LOCALLY ATTACHED | HEALTHY   
-DCN-DHL-CC249-BGW-93240-01     | 2          | Vlan2192, Standalone Po501, Standalone Ethernet1/51.62, Standalone Ethernet1/54.62, Standalone Ethernet1/7.3278 | 4 Endpoints     | 253           | ACTIVE - LOCALLY ATTACHED | HEALTHY   
-DCS-DHL-CC314-BGW-93240-01     | 2          | Vlan2191, Standalone Ethernet1/51.62, Standalone Ethernet1/54.62, Standalone Ethernet1/7.3278 | 3 Endpoints     | 254           | ACTIVE - LOCALLY ATTACHED | HEALTHY   
-DCS-DHL-CC323-BGW-93240-01     | 2          | Vlan2191, Standalone Ethernet1/51.62, Standalone Ethernet1/54.62, Standalone Ethernet1/7.3278 | 3 Endpoints     | 254           | ACTIVE - LOCALLY ATTACHED | HEALTHY   
+--- Validation Scope ---
+1. Specific Device
+2. Fabric (DCN or DCS)
+3. All Switches
+Select an option (1-3): 3
 
-===========================================================================================================================================================
-Table 4: Stale Switches (0 Endpoints)
-===========================================================================================================================================================
-Switch                         | vPC Domain | Local Ports                    | Endpoint Count  | Remote Routes | Classification            | Health    
------------------------------------------------------------------------------------------------------------------------------------------------------------
-DCN-DHL-CC237-LEAF-9348-01     | 3          | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC240-LEAF-9348-01     | 3          | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC311-LEAF-9348-01     | 3          | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC312-LEAF-9348-01     | 3          | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC250-LEAF-9336-01     | 4          | Vlan52, Vlan54, Vlan58, Vlan2192 | 0 Endpoints     | 491           | ACTIVE - REMOTE VXLAN     | REVIEW    
-DCN-DHL-CC251-LEAF-9336-01     | 4          | Vlan52, Vlan54, Vlan58, Vlan2192 | 0 Endpoints     | 491           | ACTIVE - REMOTE VXLAN     | REVIEW    
-DCS-DHL-CC324-LEAF-9336-01     | 4          | Vlan52, Vlan54, Vlan58, Vlan2191 | 0 Endpoints     | 492           | ACTIVE - REMOTE VXLAN     | REVIEW    
-DCS-DHL-CC325-LEAF-9336-01     | 4          | Vlan52, Vlan54, Vlan58, Vlan2191 | 0 Endpoints     | 492           | ACTIVE - REMOTE VXLAN     | REVIEW    
-DCN-DHL-CC242-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC249-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC252-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC253-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC253-LEAF-9348-02     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC254-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC256-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC259-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC265-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC266-LEAF-93240-01    | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC267-LEAF-93240-01    | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC272-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCN-DHL-CC272-LEAF-9348-02     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC315-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC317-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC322-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC324-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC326-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC327-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC327-LEAF-9348-02     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC335-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC343-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC345-LEAF-93240-01    | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC346-LEAF-93240-01    | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC347-LEAF-9348-01     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
-DCS-DHL-CC347-LEAF-9348-02     | Standalone | None                           | 0 Endpoints     | 0             | STALE (VRF DEFINITION ONLY) | REVIEW    
+Enter Service VRF Name: vblock_vrf
 
-========================================================================================================================
-Local Endpoint Details
-========================================================================================================================
-Switch                         | MAC                | IP               | Intf       | Egress Port     | Description                   
-------------------------------------------------------------------------------------------------------------------------
-DCN-DHL-CC254-LEAF-93240-01    | 0060.1699.2e68     | 172.26.32.230    | Vlan52     | vPC Po200       |                               
-DCN-DHL-CC254-LEAF-93240-01    | 0060.1699.2e68     | 172.26.38.230    | Vlan58     | vPC Po200       |                               
-DCN-DHL-CC255-LEAF-93240-01    | 0060.1699.2e68     | 172.26.32.230    | Vlan52     | vPC Po200       |                               
-DCN-DHL-CC255-LEAF-93240-01    | 0060.1699.2e68     | 172.26.38.230    | Vlan58     | vPC Po200       |                               
-DCS-DHL-CC336-LEAF-93240-01    | 0060.1699.2b94     | 172.26.34.220    | Vlan54     | vPC Po200       |                               
-DCS-DHL-CC336-LEAF-93240-01    | 0060.1699.2b94     | 172.26.32.220    | Vlan52     | vPC Po200       |                               
-DCS-DHL-CC336-LEAF-93240-01    | 0060.1699.2b94     | 172.26.38.220    | Vlan58     | vPC Po200       |                               
-DCS-DHL-CC337-LEAF-93240-01    | 0060.1699.2b94     | 172.26.38.220    | Vlan58     | vPC Po200       |                               
-DCS-DHL-CC337-LEAF-93240-01    | 0060.1699.2b94     | 172.26.34.220    | Vlan54     | vPC Po200       |                               
-DCS-DHL-CC337-LEAF-93240-01    | 0060.1699.2b94     | 172.26.32.220    | Vlan52     | vPC Po200       |                               
-DCN-DHL-CC239-BGW-93240-01     | c02c.177a.6b1f     | 172.26.52.130    | port-channel501.47 | Standalone Po501 |                               
-DCN-DHL-CC239-BGW-93240-01     | 9ca9.b81a.1102     | 172.22.32.2      | Ethernet1/51.62 | Standalone Ethernet1/51 |                               
-DCN-DHL-CC239-BGW-93240-01     | 08f4.f0eb.a102     | 172.22.32.10     | Ethernet1/54.62 | Standalone Ethernet1/54 |                               
-DCN-DHL-CC239-BGW-93240-01     | 4006.d539.7c87     | 172.22.10.61     | Ethernet1/7.3278 | Standalone Ethernet1/7 |                               
-DCN-DHL-CC249-BGW-93240-01     | c02c.177a.6b1f     | 172.26.52.134    | port-channel501.44 | Standalone Po501 |                               
-DCN-DHL-CC249-BGW-93240-01     | 9ca9.b81a.1102     | 172.22.32.6      | Ethernet1/51.62 | Standalone Ethernet1/51 |                               
-DCN-DHL-CC249-BGW-93240-01     | 08f4.f0eb.a102     | 172.22.32.14     | Ethernet1/54.62 | Standalone Ethernet1/54 |                               
-DCN-DHL-CC249-BGW-93240-01     | 4006.d539.7c88     | 172.22.11.89     | Ethernet1/7.3278 | Standalone Ethernet1/7 |                               
-DCS-DHL-CC314-BGW-93240-01     | 08f4.f0eb.a102     | 172.21.32.10     | Ethernet1/51.62 | Standalone Ethernet1/51 |                               
-DCS-DHL-CC314-BGW-93240-01     | 9ca9.b81a.1102     | 172.21.32.2      | Ethernet1/54.62 | Standalone Ethernet1/54 |                               
-DCS-DHL-CC314-BGW-93240-01     | 482e.723a.d007     | 172.21.10.61     | Ethernet1/7.3278 | Standalone Ethernet1/7 |                               
-DCS-DHL-CC323-BGW-93240-01     | 482e.723a.d008     | 172.21.11.89     | Ethernet1/7.3278 | Standalone Ethernet1/7 |                               
-DCS-DHL-CC323-BGW-93240-01     | 08f4.f0eb.a102     | 172.21.32.14     | Ethernet1/51.62 | Standalone Ethernet1/51 |                               
-DCS-DHL-CC323-BGW-93240-01     | 9ca9.b81a.1102     | 172.21.32.6      | Ethernet1/54.62 | Standalone Ethernet1/54 |                               
+--- Service Validation: VRF vblock_vrf ---
+Gathering Layer 3 Overlay & VRF evidence...
+                                              Table 1: Active Switches (>0 Endpoints) - VRF vblock_vrf (Scope: All Switches (Spines excluded))                                              
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Switch                      ┃ vPC Domain ┃ Local Ports                                                            ┃ Endpoint Count ┃ Remote Routes ┃ Classification            ┃ Health  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ DCN-DHL-CC254-LEAF-93240-01 │ 1          │ Vlan52, Vlan54, Vlan58, Vlan2192                                       │ 2 Endpoints    │ 487           │ ACTIVE - LOCALLY ATTACHED │ HEALTHY │
+├─────────────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────┼────────────────┼───────────────┼───────────────────────────┼─────────┤
+│ DCN-DHL-CC255-LEAF-93240-01 │ 1          │ Vlan52, Vlan54, Vlan58, Vlan2192                                       │ 2 Endpoints    │ 487           │ ACTIVE - LOCALLY ATTACHED │ HEALTHY │
+├─────────────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────┼────────────────┼───────────────┼───────────────────────────┼─────────┤
+│ DCS-DHL-CC336-LEAF-93240-01 │ 1          │ Vlan52, Vlan54, Vlan58, Vlan2191                                       │ 3 Endpoints    │ 486           │ ACTIVE - LOCALLY ATTACHED │ HEALTHY │
+├─────────────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────┼────────────────┼───────────────┼───────────────────────────┼─────────┤
+│ DCS-DHL-CC337-LEAF-93240-01 │ 1          │ Vlan52, Vlan54, Vlan58, Vlan2191                                       │ 3 Endpoints    │ 486           │ ACTIVE - LOCALLY ATTACHED │ HEALTHY │
+├─────────────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────┼────────────────┼───────────────┼───────────────────────────┼─────────┤
+│ DCN-DHL-CC239-BGW-93240-01  │ 2          │ Vlan2192, Standalone Po501, Standalone Ethernet1/51.62, Standalone     │ 4 Endpoints    │ 253           │ ACTIVE - LOCALLY ATTACHED │ HEALTHY │
+│                             │            │ Ethernet1/54.62, Standalone Ethernet1/7.3278                           │                │               │                           │         │
+├─────────────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────┼────────────────┼───────────────┼───────────────────────────┼─────────┤
+│ DCN-DHL-CC249-BGW-93240-01  │ 2          │ Vlan2192, Standalone Po501, Standalone Ethernet1/51.62, Standalone     │ 4 Endpoints    │ 253           │ ACTIVE - LOCALLY ATTACHED │ HEALTHY │
+│                             │            │ Ethernet1/54.62, Standalone Ethernet1/7.3278                           │                │               │                           │         │
+├─────────────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────┼────────────────┼───────────────┼───────────────────────────┼─────────┤
+│ DCS-DHL-CC314-BGW-93240-01  │ 2          │ Vlan2191, Standalone Ethernet1/51.62, Standalone Ethernet1/54.62,      │ 3 Endpoints    │ 254           │ ACTIVE - LOCALLY ATTACHED │ HEALTHY │
+│                             │            │ Standalone Ethernet1/7.3278                                            │                │               │                           │         │
+├─────────────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────┼────────────────┼───────────────┼───────────────────────────┼─────────┤
+│ DCS-DHL-CC323-BGW-93240-01  │ 2          │ Vlan2191, Standalone Ethernet1/51.62, Standalone Ethernet1/54.62,      │ 3 Endpoints    │ 254           │ ACTIVE - LOCALLY ATTACHED │ HEALTHY │
+│                             │            │ Standalone Ethernet1/7.3278                                            │                │               │                           │         │
+└─────────────────────────────┴────────────┴────────────────────────────────────────────────────────────────────────┴───────
 
-=====================================================================================================================================================================
-Physical Attachment Details
-=====================================================================================================================================================================
-Switch                         | Port            | Logical Port    | Description               | Status     | Speed   | Transceiver        | Neighbor        | Neighbor Port  
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-DCN-DHL-CC254-LEAF-93240-01    | Eth1/58         | Po200           | --                        | notconnec  | auto    | N/A                | N/A             | N/A            
-DCN-DHL-CC254-LEAF-93240-01    | Eth1/60         | Po200           | --                        | connected  | 40G     | N/A                | N/A             | N/A            
-DCN-DHL-CC255-LEAF-93240-01    | Eth1/58         | Po200           | --                        | connected  | 40G     | N/A                | N/A             | N/A            
-DCN-DHL-CC255-LEAF-93240-01    | Eth1/60         | Po200           | --                        | connected  | 40G     | N/A                | N/A             | N/A            
-DCS-DHL-CC336-LEAF-93240-01    | Eth1/58         | Po200           | --                        | connected  | 40G     | N/A                | N/A             | N/A            
-DCS-DHL-CC336-LEAF-93240-01    | Eth1/60         | Po200           | --                        | connected  | 40G     | N/A                | N/A             | N/A            
-DCS-DHL-CC337-LEAF-93240-01    | Eth1/58         | Po200           | --                        | connected  | 40G     | N/A                | N/A             | N/A            
-DCS-DHL-CC337-LEAF-93240-01    | Eth1/60         | Po200           | --                        | connected  | 40G     | N/A                | N/A             | N/A            
-DCN-DHL-CC239-BGW-93240-01     | Eth1/3          | Po501           | po to NextDC              | connected  | 10G     | N/A                | N/A             | N/A            
-DCN-DHL-CC239-BGW-93240-01     | Eth1/1          | Po501           | NEXTDC_UPLINK_1_10G       | connected  | 10G     | N/A                | N/A             | N/A            
-DCN-DHL-CC239-BGW-93240-01     | Ethernet1/7     | N/A             | N/A                       | N/A        | N/A     | 10Gbase-SR         | N/A             | TenGigabitEthernet0/0/7
-DCN-DHL-CC239-BGW-93240-01     | Ethernet1/54    | N/A             | N/A                       | N/A        | N/A     | QSFP-100G-LR       | N/A             | HundredGigE1/0/1
-DCN-DHL-CC239-BGW-93240-01     | Ethernet1/51    | N/A             | N/A                       | N/A        | N/A     | QSFP-100G-LR       | N/A             | HundredGigE1/0/1
-DCN-DHL-CC249-BGW-93240-01     | Eth1/3          | Po501           | Po to NextDC              | connected  | 10G     | N/A                | N/A             | N/A            
-DCN-DHL-CC249-BGW-93240-01     | Ethernet1/7     | N/A             | N/A                       | N/A        | N/A     | 10Gbase-SR         | N/A             | TenGigabitEthernet0/0/8
-DCN-DHL-CC249-BGW-93240-01     | Ethernet1/54    | N/A             | N/A                       | N/A        | N/A     | QSFP-100G-LR       | N/A             | HundredGigE1/0/2
-DCN-DHL-CC249-BGW-93240-01     | Eth1/2          | Po501           | Po to NextDC              | connected  | 10G     | N/A                | N/A             | N/A            
-DCN-DHL-CC249-BGW-93240-01     | Ethernet1/51    | N/A             | N/A                       | N/A        | N/A     | QSFP-100G-LR       | N/A             | HundredGigE1/0/2
-DCS-DHL-CC314-BGW-93240-01     | Ethernet1/54    | N/A             | N/A                       | N/A        | N/A     | QSFP-100G-LR       | N/A             | HundredGigE1/0/3
-DCS-DHL-CC314-BGW-93240-01     | Ethernet1/51    | N/A             | N/A                       | N/A        | N/A     | QSFP-100G-LR       | N/A             | HundredGigE1/0/3
-DCS-DHL-CC314-BGW-93240-01     | Ethernet1/7     | N/A             | N/A                       | N/A        | N/A     | 10Gbase-SR         | N/A             | TenGigabitEthernet0/0/7
-DCS-DHL-CC323-BGW-93240-01     | Ethernet1/54    | N/A             | N/A                       | N/A        | N/A     | QSFP-100G-LR       | N/A             | HundredGigE1/0/4
-DCS-DHL-CC323-BGW-93240-01     | Ethernet1/7     | N/A             | N/A                       | N/A        | N/A     | 10Gbase-SR         | N/A             | TenGigabitEthernet0/0/8
-DCS-DHL-CC323-BGW-93240-01     | Ethernet1/51    | N/A             | N/A                       | N/A        | N/A     | QSFP-100G-LR       | N/A             | HundredGigE1/0/4
+this is another report. however it is missing a few nodes
+
+DCS-DHL-CC312-LEAF-9348-01# show interface status | i connected
+mgmt0         --                 connected routed    full    1000    --         
+Eth1/3        BHS                connected 10        full    1000    10/100/1g  
+Eth1/5        BHS                connected 10        full    1000    10/100/1g  
+Eth1/6        BHS                connected 11        full    1000    10/100/1g  
+Eth1/48       OOB VLAN Access Po connected 501       full    1000    10/100/1g  
+Eth1/53       connected-to-DCS-D connected routed    full    100G    QSFP-100G40G-BIDI
+Eth1/54       connected-to-DCS-D connected routed    full    100G    QSFP-100G40G-BIDI
+Po99          "vpc-peer-link DCS connected trunk     auto    auto    --         
+Lo0           Routing loopback i connected routed    auto    auto    --         
+Lo1           VTEP loopback inte connected routed    auto    auto    --         
+Vlan10        BHS_10_NW          connected routed    auto    auto    --
+Vlan11        BHS_11_NW          connected routed    auto    auto    --
+Vlan60        CASI_60_NW         connected routed    auto    auto    --
+Vlan91        APC_91_NW          connected routed    auto    auto    --
+Vlan100       NET_MGMT_100_NW    connected routed    auto    auto    --
+Vlan131       SKIDATA_131_NW     connected routed    auto    auto    --
+Vlan160       PA_EWIS_160_NW     connected routed    auto    auto    --
+Vlan310       VOICE_310_NW       connected routed    auto    auto    --
+Vlan390       SITA_390_NW        connected routed    auto    auto    --
+Vlan501       GLOBAL_501_NW      connected routed    auto    auto    --
+Vlan701       LPR_701_NW         connected routed    auto    auto    --
+Vlan730       PIDS_730_NW        connected routed    auto    auto    --
+Vlan770       VX_MGMT_DCS        connected routed    auto    auto    --
+Vlan925       XRAY_925_NW        connected routed    auto    auto    --
+Vlan2101      VxBlock VRF        connected routed    auto    auto    --
+Vlan2103      NET_MGMT_VRF       connected routed    auto    auto    --
+Vlan2107      APC_VRF            connected routed    auto    auto    --
+Vlan2109      BHS_VRF            connected routed    auto    auto    --
+Vlan2115      CASI_VRF           connected routed    auto    auto    --
+Vlan2124      SKIDATA_VRF        connected routed    auto    auto    --
+Vlan2129      PA_EWIS_VRF        connected routed    auto    auto    --
+Vlan2143      VOICE_VRF          connected routed    auto    auto    --
+Vlan2148      SITA_VRF           connected routed    auto    auto    --
+Vlan2158      LPR_VRF            connected routed    auto    auto    --
+Vlan2159      PIDS_VRF           connected routed    auto    auto    --
+Vlan2160      CBST1              connected routed    auto    auto    --
+Vlan2164      XRAY_VRF           connected routed    auto    auto    --
+Vlan2168      GLOBAL_VRF         connected routed    auto    auto    --
+Vlan2179      ABD_ICM_VRF        connected routed    auto    auto    --
+Vlan3340      ABD_ICM_3340_NW    connected routed    auto    auto    --
+nve1          --                 connected --        auto    auto    --         
+DCS-DHL-CC312-LEAF-9348-01# show mac
+mac        mac-list   
+DCS-DHL-CC312-LEAF-9348-01# show mac address-table interface Eth 1/3
+Legend: 
+        * - primary entry, G - Gateway MAC, (R) - Routed MAC, O - Overlay MAC
+        age - seconds since last seen,+ - primary entry using vPC Peer-Link,
+        (T) - True, (F) - False, C - ControlPlane MAC, ~ - vsan,
+        (NA)- Not Applicable
+   VLAN     MAC Address      Type      age     Secure NTFY Ports
+---------+-----------------+--------+---------+------+----+------------------
+*   10     2067.7cef.a86c   dynamic  NA         F      F    Eth1/3
+DCS-DHL-CC312-LEAF-9348-01# 
+DCS-DHL-CC312-LEAF-9348-01# show mac address-table interface Eth 1/5
+Legend: 
+        * - primary entry, G - Gateway MAC, (R) - Routed MAC, O - Overlay MAC
+        age - seconds since last seen,+ - primary entry using vPC Peer-Link,
+        (T) - True, (F) - False, C - ControlPlane MAC, ~ - vsan,
+        (NA)- Not Applicable
+   VLAN     MAC Address      Type      age     Secure NTFY Ports
+---------+-----------------+--------+---------+------+----+------------------
+*   10     2067.7cef.a86d   dynamic  NA         F      F    Eth1/5
+DCS-DHL-CC312-LEAF-9348-01# show mac address-table interface Eth 1/6
+Legend: 
+        * - primary entry, G - Gateway MAC, (R) - Routed MAC, O - Overlay MAC
+        age - seconds since last seen,+ - primary entry using vPC Peer-Link,
+        (T) - True, (F) - False, C - ControlPlane MAC, ~ - vsan,
+        (NA)- Not Applicable
+   VLAN     MAC Address      Type      age     Secure NTFY Ports
+---------+-----------------+--------+---------+------+----+------------------
+*   11     8030.e030.ee96   dynamic  NA         F      F    Eth1/6
+DCS-DHL-CC312-LEAF-9348-01# 
+DCS-DHL-CC312-LEAF-9348-01# 
+DCS-DHL-CC312-LEAF-9348-01# show ip arp vrf bhs_vrf 
+
+Flags: * - Adjacencies learnt on non-active FHRP router
+       + - Adjacencies synced via CFSoE
+       # - Adjacencies Throttled for Glean
+       CP - Added via L2RIB, Control plane Adjacencies
+       PS - Added via L2RIB, Peer Sync
+       RO - Re-Originated Peer Sync Entry
+       D - Static Adjacencies attached to down interface
+
+IP ARP Table for context bhs_vrf
+Total number of entries: 3
+Address         Age       MAC Address     Interface       Flags
+172.19.248.16   00:00:24  2067.7cef.a86c  Vlan10                   
+172.19.248.17   00:03:19  2067.7cef.a86d  Vlan10                   
+172.19.249.16   00:02:48  8030.e030.ee96  Vlan11   
+
+this one has a mac and ip but not reproted as active end points. 
