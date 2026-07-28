@@ -193,4 +193,7 @@ also in his example, some of them leaf switches ae in vpc mode but it mentione a
 ├─────────────────────────────┼────────────────┼───────────────┼────────────────────┼─────────────┼──────────────────┤
 │ DCS-DHL-CC337-LEAF-93240-01 │ 0060.1699.2b94 │ 172.26.32.220 │ Vlan52             │ vPC Po200   │ N/A    
 
+/....also 
+ DCN-DHL-CC249-LEAF-9348-01  │ Standalone │ None                                                                                                            │ 0 Endpoints    │ 0             │ STALE / RESIDUE  
 
+ stale residue., give more context. is there any stale config there liek vrf, vlan ot what ? 
